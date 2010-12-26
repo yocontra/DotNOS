@@ -1,0 +1,9 @@
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\GIOR.MainForm.resources
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\GIOR.Properties.Resources.resources
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\bin\Debug\GIOR.exe
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\bin\Debug\GIOR.pdb
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\GIOR.exe
+c:\users\eric\documents\visual studio 2010\Projects\GIOR\GIOR\obj\x86\Debug\GIOR.pdb
