@@ -46,32 +46,29 @@ namespace GIOR
         }
         public void Transform()
         {
-            Logger.Log("Starting Transformer");
+            Logger.Log("Starting Transformer...");
             foreach (TypeDefinition type in WorkingAssembly.MainModule.Types)
             {
+                int replaced = 0;
                 foreach (MethodDefinition method in type.Methods)
                 {
                     if (!method.HasBody) continue;
-                    int replaced = method.ReplaceInvalids();
-                    if (replaced > 0)
-                    {
-                        Logger.Log(replaced + " Invalid OpCodes replaced in " + method.Name);
-                    }
+                    replaced += method.ReplaceInvalids();
                 }
                 foreach (MethodDefinition method in type.Constructors)
                 {
                     if (!method.HasBody) continue;
-                    int replaced = method.ReplaceInvalids();
-                    if (replaced > 0)
-                    {
-                        Logger.Log(replaced + " Invalid OpCodes replaced in constructor " + method.Name);
-                    }
+                    replaced += method.ReplaceInvalids();
+                }
+                if (replaced > 0)
+                {
+                    Logger.Log(replaced + " OpCodes replaced in class " + type.Name);
                 }
             }
         }
         public void Save()
         {
-            Logger.Log("Saving Assembly");
+            Logger.Log("Saving Assembly...");
             AssemblyFactory.SaveAssembly(WorkingAssembly, NewLocation);
         }
     }

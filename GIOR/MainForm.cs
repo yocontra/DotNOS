@@ -12,7 +12,7 @@ namespace GIOR
 {
     public partial class MainForm : Form
     {
-        public LogHandler _mainLogger = new LogHandler("Main");
+        public LogHandler Logger = new LogHandler("Main");
         #region Singleton
         static MainForm _instance;
         static readonly object PadLock = new object();
@@ -45,7 +45,7 @@ namespace GIOR
                 return;
             }
         }
-        private void FileSelectButton_Click(object sender, EventArgs e)
+        private void FileSelectButtonClick(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog
             {
@@ -61,16 +61,16 @@ namespace GIOR
             logTextBox.Text = "";
             fileSelectTextBox.Enabled = false;
             FileSelectButton.Enabled = false;
-            _mainLogger.Log("Starting OpCode Transformer!");
+            Logger.Log("Starting Transformer!");
             HeavyWorker.RunWorkerAsync();
         }
-        private void HeavyWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void HeavyWorkerRunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            _mainLogger.Log("Operation Completed!");
+            Logger.Log("Operation Completed!");
             fileSelectTextBox.Enabled = true;
             FileSelectButton.Enabled = true;
         }
-        private void HeavyWorker_DoWork(object sender, DoWorkEventArgs e)
+        private void HeavyWorkerDoWork(object sender, DoWorkEventArgs e)
         {
             Transformer trans = new Transformer(fileSelectTextBox.Text);
             trans.Load();

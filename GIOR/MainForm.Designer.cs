@@ -44,7 +44,7 @@
             this.FileSelectButton.TabIndex = 0;
             this.FileSelectButton.Text = "Select File...";
             this.FileSelectButton.UseVisualStyleBackColor = true;
-            this.FileSelectButton.Click += new System.EventHandler(this.FileSelectButton_Click);
+            this.FileSelectButton.Click += new System.EventHandler(this.FileSelectButtonClick);
             // 
             // asmlabel
             // 
@@ -65,8 +65,8 @@
             // 
             // HeavyWorker
             // 
-            this.HeavyWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(HeavyWorker_RunWorkerCompleted);
-            this.HeavyWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.HeavyWorker_DoWork);
+            this.HeavyWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(HeavyWorkerRunWorkerCompleted);
+            this.HeavyWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.HeavyWorkerDoWork);
             // 
             // logTextBox
             // 
